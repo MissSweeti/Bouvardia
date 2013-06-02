@@ -3,7 +3,6 @@ function showCommonLocations(){
 }
 function loader(){
 
-	console.log("Initializing");
 	version = "0.1";
 	series = "dev";
 	rooms = [];
@@ -19,7 +18,6 @@ function loader(){
 	if( alreadyIncluded()){
 		message("Oh, how sweet! The data mantainer already loaded the required Bouvardia data files for you. To start the game, type 'play'.");
 	}
-	console.log("Initialized!");
 	
 }
 
@@ -203,7 +201,6 @@ function processCommand(){
 }
 $(document).keypress(function(event) {
 
-	console.log(event.which);
 	if(event.which == 32){
 		updateCommand(" ");
 	}
