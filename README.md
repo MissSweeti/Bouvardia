@@ -23,7 +23,7 @@ GNU General Public License for more details.
 
 ## Using the .hta file
 
-Using the hta file is **very** alpha and not for the faint of heart.
+Using the hta file is **very** alpha and not for the faint of heart. In fact, we're developing other ways of doing this without the hta file.
 
 But, if you'd like to try it anyway, you can download the file [here](https://raw.github.com/TDLive-Inc/Bouvardia/gh-pages/bouvardia.hta).
 
