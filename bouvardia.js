@@ -181,6 +181,13 @@ function processCommand(){
 				message("No game loaded! Type 'load (location-of-data-js-file)'");
 			}
 			else{
+				message("");
+				if(game_information["fancy_introduction"]){
+					message("<b>" + game_information["publisher"] + " presents</b>");
+					message("<b><u>" + game_information["name"] + "</b></u> <i>" + game_information["version"] + "</i>");
+					message(game_information["copyright"]);
+					message("");
+				}
 				message(game_information["introduction"]);
 				room(0);
 			}
