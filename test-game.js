@@ -6,6 +6,7 @@ function bootstrap(Bouvardiaversion){
 	
 	game_information = [];
 	
+	game_information["fancy_introduction"] = true;
 	game_information["name"] = "Bouvardia Test Game"
 	game_information["publisher"] = "Bouvardia Team"
 	game_information["copyright"] = "Copyright TDLive.org Incorporated"
