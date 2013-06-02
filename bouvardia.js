@@ -153,17 +153,18 @@ function processCommand(){
 	else if(cmd[0] == "east" || cmd == "e" || cmd == "right") go("East");
 	else if(cmd[0] == "west" || cmd == "w" || cmd == "left") go("West");
 	else if(cmd[0] == "load"){
-		var imported = document.createElement('script');
-		imported.src = cmd[1];
-		LoadedFile = cmd[1];
-		document.head.appendChild(imported);
-		message("Loaded! Type 'play' to play.");
-	}
-	else if(cmd[0] == "stop"){
-		message("Unloading");
-		removejscssfile(LoadedFile, "js")
-		Bouvardia = false;
-		message("Unloaded");
+		if(cmd[1] == "gh"){
+			var imported = document.createElement('script');
+			imported.src = "https://raw.github.com/TDLive-Inc/Bouvardia-Games/master/" + cmd[2] + ".js";
+			document.head.appendChild(imported);
+			message("Loaded! Type 'play' to play.");
+		}
+		else{
+			var imported = document.createElement('script');
+			imported.src = cmd[1];
+			document.head.appendChild(imported);
+			message("Loaded! Type 'play' to play.");
+		}
 	}
 	else if(cmd[0] == "pickup"){
 		if(itemInRoom){
