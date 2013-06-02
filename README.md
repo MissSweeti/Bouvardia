@@ -25,7 +25,7 @@ GNU General Public License for more details.
 
 Using the hta file is **very** alpha and not for the faint of heart.
 
-But, if you'd like to try it anyway, you can download the file [https://raw.github.com/TDLive-Inc/Bouvardia/gh-pages/bouvardia.hta](here).
+But, if you'd like to try it anyway, you can download the file [here](https://raw.github.com/TDLive-Inc/Bouvardia/gh-pages/bouvardia.hta).
 
 ## Making your own games
 
