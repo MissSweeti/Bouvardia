@@ -20,6 +20,13 @@ GNU General Public License for more details.
 
 3. Profit!
 
+
+## Using the .hta file
+
+Using the hta file is **very** alpha and not for the faint of heart.
+
+But, if you'd like to try it anyway, you can download the file [https://raw.github.com/TDLive-Inc/Bouvardia/gh-pages/bouvardia.hta](here).
+
 ## Making your own games
 
 Take a look at the source of game.js. Most to all of the config. options are there.
