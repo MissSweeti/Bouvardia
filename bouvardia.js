@@ -205,6 +205,9 @@ $(document).keypress(function(event) {
 	if(event.which == 35){
 		updateCommand("#");
 	}
+	if(event.which == 45){
+		updateCommand("-");
+	}
 	if(event.which == 46){
 		updateCommand(".");
 	}
