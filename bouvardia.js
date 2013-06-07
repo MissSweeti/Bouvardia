@@ -249,6 +249,9 @@ $(document).keypress(function(event) {
 	if(event.which == 57){
 		updateCommand("9");
 	}
+	if(event.which == 58){
+		updateCommand(":");
+	}
 	if(event.which == 63){
 		updateCommand("?");
 	}
