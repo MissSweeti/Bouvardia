@@ -3,6 +3,7 @@ function showCommonLocations(){
 }
 function loader(){
 
+	$("#hidden").focus();
 	version = "0.1";
 	series = "dev";
 	rooms = [];
