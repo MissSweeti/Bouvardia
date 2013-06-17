@@ -162,16 +162,11 @@ function processCommand(){
 		else if(cmd[1] == "cb"){
 			if(clipsupport){
 				message("Please accept this clipboard request in order for us to get the text from your clipboard. Don't worry, it's only used this one time :)");
-				try {
-					site = window.clipboardData.getData('Text');
-					var imported = document.createElement('script');
-					imported.src = site;
-					document.head.appendChild(imported);
-					message("Loaded! Type 'play' to play.");
-				}
-				catch(e) {
-					message("Sorry, we couldn't get the text from your clipboard. :(");
-				}
+				site = window.clipboardData.getData('Text');
+				var imported = document.createElement('script');
+				imported.src = site;
+				document.head.appendChild(imported);
+				message("Loaded! Type 'play' to play.");
 			}
 			else{
 				message("Only Internet Explorer has clipboard support. Sorry :(");
