@@ -14,13 +14,11 @@ function loader(){
 	$("#textbox").html("_");
 	message("Bouvardia VM");
 	message("Copyright (c)2013 TDLive.org, Incorporated.");
-	message("NOTE: You may have to load a Bouvardia data file by typing load file-location.")
-	message("Click <a href='#' onClick='showCommonLocations();'>here</a> to show common locations for Bouvardia data files.")
 	try {
 		alreadyIncluded();
 	}
 	catch(e) {
-		message("<b>NOTE</b>: No file(s) loaded.");
+		message("<b>NOTE</b>: No file(s) loaded. Type load file-location to load a file.");
 	}
 	
 }
@@ -160,6 +158,24 @@ function processCommand(){
 			imported.src = "https://raw.github.com/TDLive-Inc/Bouvardia-Games/master/" + cmd[2] + ".js";
 			document.head.appendChild(imported);
 			message("Loaded! Type 'play' to play.");
+		}
+		else if(cmd[1] == "cb"){
+			if(clipsupport){
+				message("Please accept this clipboard request in order for us to get the text from your clipboard. Don't worry, it's only used this one time :)");
+				try {
+					site = window.clipboardData.getData('Text');
+					var imported = document.createElement('script');
+					imported.src = site;
+					document.head.appendChild(imported);
+					message("Loaded! Type 'play' to play.");
+				}
+				catch(e) {
+					message("Sorry, we couldn't get the text from your clipboard. :(");
+				}
+			}
+			else{
+				message("Only Internet Explorer has clipboard support. Sorry :(");
+			}
 		}
 		else{
 			var imported = document.createElement('script');
