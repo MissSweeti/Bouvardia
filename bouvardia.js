@@ -14,10 +14,13 @@ function loader(){
 	$("#textbox").html("_");
 	message("Bouvardia VM");
 	message("Copyright (c)2013 TDLive.org, Incorporated.");
-	message("NOTE: You may have to load an Bouvardia data file by typing load file-location.")
+	message("NOTE: You may have to load a Bouvardia data file by typing load file-location.")
 	message("Click <a href='#' onClick='showCommonLocations();'>here</a> to show common locations for Bouvardia data files.")
-	if( alreadyIncluded()){
-		message("Oh, how sweet! The data mantainer already loaded the required Bouvardia data files for you. To start the game, type 'play'.");
+	try {
+		alreadyIncluded();
+	}
+	catch(e) {
+		message("<b>NOTE</b>: No file(s) loaded.");
 	}
 	
 }
