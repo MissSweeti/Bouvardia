@@ -178,11 +178,9 @@ function processCommand(){
 	}
 	else if(cmd[0] == "play"){
 		if( ! Bouvardia){
-			Bouvardia = true;
-			if( !bootstrap(version)){
-				message("No game loaded! Type 'load (location-of-data-js-file)'");
-			}
-			else{
+			try{
+				bootstrap(version);
+				Bouvardia = true;
 				message("");
 				if(game_information["fancy_introduction"]){
 					message("<b>" + game_information["publisher"] + " presents</b>");
@@ -192,6 +190,11 @@ function processCommand(){
 				}
 				message(game_information["introduction"]);
 				room(0);
+			}
+			catch(e){
+				message("Error loading file!")
+				message(e)
+				message("Check that the file exists. It may be a problem with the file.")
 			}
 		}
 		else{
